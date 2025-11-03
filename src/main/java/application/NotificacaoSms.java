@@ -35,7 +35,7 @@ public class NotificacaoSms extends Notificacao {
             this.numeroTelefone);
     }
 
-    @Override
+     @Override
     public void registrarLog() {
         System.out.println(
             "[LOG] SMS ("+
