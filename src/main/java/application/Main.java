@@ -2,7 +2,16 @@ package application;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!!!");
+        NotificacaoSms notiSMS = new NotificacaoSms(
+            "Marcos", "1451351", "Msg de teste", 1);
+    
+    notiSMS.exibirInformacoesRemetente();
+    notiSMS.enviar();
+    notiSMS.registrarLog();
+
+    notiSMS.definirPrioridade(8);
+    notiSMS.obterNivelPrioridade();
+    notiSMS.definirPrioridade(0);
     }
 }
 
