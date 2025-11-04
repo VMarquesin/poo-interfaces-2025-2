@@ -10,8 +10,20 @@ public class Main {
     notiSMS.registrarLog();
 
     notiSMS.definirPrioridade(8);
-    notiSMS.obterNivelPrioridade();
+    System.out.println(notiSMS.obterNivelPrioridade());
     notiSMS.definirPrioridade(0);
+
+    Notificacao notif = new NotificacaoSms(
+        "Fulano", "156165165", "Oush", 3);
+
+    notif.exibirInformacoesRemetente();
+    notif.enviar();
+
+    Priorizavel objPriorizavel = new NotificacaoSms(
+        "Russo", "1321351", "New Test", 2);
+    
+    objPriorizavel.definirPrioridade(6);
+
     }
 }
 
